@@ -1,0 +1,26 @@
+Definitions
+	Dig = %0|1|2|3|4|5|6|7|8|9 ;
+	Int = Dig+ ;
+	Dig3 = Dig^3 ;
+	IntEng = Dig^{1,3} [ %, Dig3 ]+ ;
+	IntEur = Dig^{1,3} [ %. Dig3 ]+ ;
+	Eng3Groups = Dig^{1,3} [ %, Dig3 ]* ;
+	Eur3Groups = Dig^{1,3} [ %. Dig3 ]* ;
+	FloatEng = [ Eng3Groups | Int ] %. Int ;
+	FloatEur = [ Eng3Groups | Int ] %, Int ;
+	GenDigit = $[Dig] - [Int | IntEng |
+		IntEur | FloatEng | FloatEur ] ;
+	RedID = 8 Dig^8 ;
+	PhoneNumber = Dig^8;
+	SocialSecurty = Dig^9;
+	
+	
+LEXICON Root
+< FloatEng [ %+Float %+Eng .x. 0 ] >           # ;
+< FloatEur [ %+Float %+Eur .x. 0 ] >           # ;
+< IntEng [ %+Int %+Eng .x. 0 ] >	           # ;
+< IntEur [ %+Int %+Eur .x. 0 ] >	           # ;
+< Int %+Int:0 >						           # ;
+< GenDigit %+Dig:0 >				           # ;
+< PhoneNumber (%+Dig3) %+Dig3 - %Dig^4 >       # ;
+< Social Security %+Dig3 - %+Dig^2 - %Dig ^4 > # ;

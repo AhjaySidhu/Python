@@ -1,0 +1,12 @@
+Definitions
+	Alphabet = %a|á|b|c|d|e|é|f|g|h|i|í|l|m|n|o|ó|p|r|s|t|u|ú|v ;
+
+LEXICON Neg
+	+V+Neg:0			#;
+
+LEXICON VSuffix
+	+V+Inf+:0		Neg;
+	+V+Past+:0		Neg;
+	+V+Pres+:eann   Neg;
+	+V+Fut+:fidh	Neg;
+	+V+Cond+:feadh  Neg;

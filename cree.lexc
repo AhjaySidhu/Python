@@ -1,0 +1,30 @@
+LEXICON Root
+						Noun;
+						Verb;
+						VerbRoot;
+	1sg+:ni%^			Stem;
+
+LEXICON Stem
+		Noun;
+		Verb;
+		VerbRoot;
+		
+LEXICON VerbRoot
+	fut+:ka%^			Verb;
+
+LEXICON Noun
+    canoe:ciimaan       #;
+    money:soonija       #;
+    meat:wijaash        #;
+    spoon:eemihkwaan    #;
+    hat:astotin         #;
+    pipe:ospwaakan      #;
+
+LEXICON Verb
+	count:akime			Suff;
+	sit:api				Suff;
+	rest:ispelohke		Suff;
+	
+LEXICON Suff
+    +1s:%^n     		#;
+    +2s:%^w      		#;

@@ -1,0 +1,8 @@
+#PhoneNumber
+(" (" Lst(Dig)^3 ")" (" ")) Lst(Dig)^3 "-" Lst(Dig)^4 ;
+
+#SocialSecurity
+Lst(Dig)^3 "-" Lst(Dig)^2 "-" Lst(Dig)^4 ;
+
+#RedID
+Lst(8) Lst(Dig)^8 ;

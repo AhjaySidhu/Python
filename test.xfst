@@ -1,0 +1,5 @@
+define Suf [ %+Prog+{ing} | %+Pres3PSg:s | %+Past:{ed} | %+Agentive:{er} ];
+define Rule1 p -> pp || _ [ ing | ed | er ];
+define Rule2 ie -> y || _ ing;
+define Rule3 e -> 0 || [a | b | c | d | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | z ] _ [ ing | ed | er ];
+read regex Suf .o. Rule1 .o. Rule2 .o. Rule3;

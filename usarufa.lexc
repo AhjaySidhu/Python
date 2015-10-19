@@ -1,0 +1,13 @@
+LEXICON Verb
+    talk:te     VSuffix;
+	eat:naa     VSuffix;
+	do:o        VSuffix;
+	give:ame    VSuffix;
+	hear:itaa   VSuffix;
+	hit:ikamo   VSuffix;
+
+LEXICON VSuffix	
+	+1s:^une   #;
+	+2s:^ne	   #;
+	+3s:^iye   #;
+	+2d:^koa   #;
